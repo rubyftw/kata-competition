@@ -44,3 +44,12 @@ will be excluded from an average of all scores to provide the subjective compone
 
 * Ruby 2.1.1 (can develop in other versions but will be tested against 2.1.1p76)
 
+## Problems
+
+### 1. Snail Sort (25 points)
+
+### 2. Palindrome Validator (25 points)
+
+### 3. Method Chain Calculator (50 points)
+
+
