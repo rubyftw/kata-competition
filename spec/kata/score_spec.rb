@@ -90,6 +90,34 @@ describe Kata do
 
 
   describe "::palindrome?" do
+    it "should recognize palindromes" do
+      palindrome?("abc123321cba").must_equal(true)
+
+      points(:palindrome, 5)
+    end
+
+    it "should ignore non-alphanumeric characters" do
+      palindrome?("&(*EUIEOUEH:NHXK&*EFOUGDdoaluei7cgandnagc7ieulaodDGUOFEKXHN:HEUOEIUE*(&").must_equal(true)
+
+      points(:palindrome, 5)
+    end
+
+    it "should not allow non-palindromes" do
+      palindrome?("No more pain").must_equal(false)
+
+      points(:palindrome, 5)
+    end
+
+    it "should match a few big palindromes" do
+      palindrome?("Are we not pure? “No sir!” Panama’s moody Noriega brags. “It is garbage!” Irony dooms a man; a prisoner up to new era.").must_equal(true)
+      palindrome?("A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!").must_equal(true)
+      palindrome?("A Toyota! Race fast, safe car! A Toyota!").must_equal(true)
+
+      points(:palindrome, 10)
+    end
+  end
+
+  describe Kata::Calc do
 
   end
 
