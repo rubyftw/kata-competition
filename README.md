@@ -46,6 +46,12 @@ will be excluded from an average of all scores to provide the subjective compone
 
 ## Problems
 
+To run the test cases for each problem:
+
+```bash
+$ ruby spec/kata/KATA_NAME_spec.rb
+```
+
 ### 1. Snail Sort (25 points)
 
 Given a two-dimensional array, sort like this:
