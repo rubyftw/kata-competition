@@ -9,7 +9,7 @@ March 25, 2014
 1. Team must consist of two people or fewer.
 1. Prizes will be awarded based on an objective "correctness" score and a subjective "style" score.
 1. No external libraries, only what is available in Ruby core and stdlib
-1. Eeach team will have 45 minutes to complete as many challenges as possible.
+1. Each team will have 45 minutes to complete as many challenges as possible.
 
 ## Prizes
 
@@ -32,7 +32,7 @@ score component. Each are out of 100 points and will be averaged to provide the 
 
 ### Correctness Component
 
-Each problem is worth a total number of objectvie points. The points will be awarded during running
+Each problem is worth a total number of objective points. The points will be awarded during running
 test cases that have not been made publicly available during development. 
 
 ### Subjective Component
