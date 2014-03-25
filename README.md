@@ -48,8 +48,33 @@ will be excluded from an average of all scores to provide the subjective compone
 
 ### 1. Snail Sort (25 points)
 
+Given a two-dimensional array, sort like this:
+
+![](http://www.haan.lu/files/2513/8347/2456/snail.png)
+
+It should allow for differing lengths of sub-arrays, filling in `nil` where there are no elements.
+
 ### 2. Palindrome Validator (25 points)
 
+Return `true` if the given string is a palindrome. It should be case-insensitive and ignore all
+non-alphanumeric characters.
+
+```ruby
+palindrome?("racecar") # => true
+palindrome?("A man, a plan, a canal: PANAMA!") # => true
+palindrome?("Snake achings") # => false
+```
+
 ### 3. Method Chain Calculator (50 points)
+
+Add, subtract, multiply, and divide numbers between 1 and 20 using a method chaining technique like
+this:
+
+```ruby
+Calc.new.twenty.plus.seven  # => 27
+Calc.new.seven.times.eight  # => 56
+Calc.new.three.minus.twelve # => -9
+```
+
 
 
