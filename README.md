@@ -9,13 +9,14 @@ March 25, 2014
 1. Team must consist of two people or fewer.
 1. Prizes will be awarded based on an objective "correctness" score and a subjective "style" score.
 1. No external libraries, only what is available in Ruby core and stdlib
+1. Eeach team will have 45 minutes to complete as many challenges as possible.
 
 ## Prizes
 
 For each team member:
 
-* Fancy Oven Bits American Apparel Shirt (M, L, 2XL)
-* $10 Amazon Gift Card
+* One (1) Fancy [Oven Bits](http://ovenbits.com) American Apparel Shirt (M, L, 2XL)
+* One (1) $10 Amazon Gift Card
 
 ## Submission
 
