@@ -5,6 +5,8 @@ module Kata
   end
 
   def palindrome?(string)
+    filtered_string = string.downcase.gsub(/\W/, '')
+    filtered_string == filtered_string.reverse
   end
 
   class Calc
