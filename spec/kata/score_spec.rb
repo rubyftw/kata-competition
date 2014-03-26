@@ -19,7 +19,7 @@ end
 
 points(:snail_sort, 0)
 points(:palindrome, 0)
-points(:calculator, 0)
+points(:calc, 0)
 
 MiniTest::Unit.after_tests do
   puts "\n\n"
@@ -72,12 +72,12 @@ describe Kata do
     end
 
     it "should sort a large, not-square array with sub-arrays of various lengths" do
-      array = [[  15, 77, 75, 44, 97, 12, 36, 35, 81, 21 ],
+      array = [[  15, 77, 75, 44, 97, 12, 36, 35, 81 ],
                [ "33", "27", "51", "19", "74", "71", "40" ],
                [ 1, 2, 7, "hello", 99, Kata, "rubyftw", "for the win" ],
-               [ Minitest, Integer, "\"", 999999999, ["a","b"] ]]
+               [ Minitest, Integer, "\"", 999999999, ["a","b"], 77, 25, 98, 10, 5 ]]
 
-      expected_result = [15, 77, 75, 44, 97, 12, 36, 35, 81, 21, nil, nil, nil, nil, nil, nil, nil,
+      expected_result = [ 15, 77, 75, 44, 97, 12, 36, 35, 81, nil, nil, nil, 5, 10, 98, 25, 77,
                          ["a", "b"], 999999999, "\"", Integer, Minitest, 1, "33",
                          "27", "51", "19", "74", "71", "40", nil, nil, nil, "for the win",
                          "rubyftw", Kata, 99, "hello", 7, 2]
@@ -91,34 +91,68 @@ describe Kata do
 
   describe "::palindrome?" do
     it "should recognize palindromes" do
-      palindrome?("abc123321cba").must_equal(true)
+      Kata.palindrome?("abc123321cba").must_equal(true)
 
       points(:palindrome, 5)
     end
 
     it "should ignore non-alphanumeric characters" do
-      palindrome?("&(*EUIEOUEH:NHXK&*EFOUGDdoaluei7cgandnagc7ieulaodDGUOFEKXHN:HEUOEIUE*(&").must_equal(true)
+      Kata.palindrome?("&(*EUIEOUEH:NHXK&*EFOUGDdoaluei7cgandnagc7ieulaodDGUOFEKXHN:HEUOEIUE*(&").must_equal(true)
 
       points(:palindrome, 5)
     end
 
     it "should not allow non-palindromes" do
-      palindrome?("No more pain").must_equal(false)
+      Kata.palindrome?("No more pain").must_equal(false)
 
       points(:palindrome, 5)
     end
 
     it "should match a few big palindromes" do
-      palindrome?("Are we not pure? “No sir!” Panama’s moody Noriega brags. “It is garbage!” Irony dooms a man; a prisoner up to new era.").must_equal(true)
-      palindrome?("A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!").must_equal(true)
-      palindrome?("A Toyota! Race fast, safe car! A Toyota!").must_equal(true)
+      Kata.palindrome?("Are we not pure? “No sir!” Panama’s moody Noriega brags. “It is garbage!” Irony dooms a man; a prisoner up to new era.").must_equal(true)
+      Kata.palindrome?("A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!").must_equal(true)
+      Kata.palindrome?("A Toyota! Race fast, safe car! A Toyota!").must_equal(true)
 
       points(:palindrome, 10)
     end
   end
 
   describe Kata::Calc do
+    it "should add two numbers" do
+      Kata::Calc.new.seven.plus.five.must_equal(12)
 
+      points(:calc, 5)
+    end
+
+    it "should subtract two numbers" do
+      Kata::Calc.new.nineteen.minus.five.must_equal(14)
+
+      points(:calc, 10)
+    end
+
+    it "should multiply two numbers" do
+      Kata::Calc.new.eleven.times.eleven.must_equal(121)
+
+      points(:calc, 10)
+    end
+
+    it "should divide two numbers" do
+      Kata::Calc.new.twenty.divided_by.five.must_equal(4)
+
+      points(:calc, 10)
+    end
+
+    it "should go negative when subtracting a smaller number" do
+      Kata::Calc.new.three.minus.seventeen.must_equal(-14)
+
+      points(:calc, 10)
+    end
+
+    it "should chain them all together" do
+      Kata::Calc.new.three.times.five.plus.fifteen.divided_by.ten.minus.two.must_equal(1)
+
+      points(:calc, 5)
+    end
   end
 
 end
