@@ -121,7 +121,7 @@ describe Kata do
     it "should add two numbers" do
       Kata::Calc.new.seven.plus.five.must_equal(12)
 
-      points(:calc, 5)
+      points(:calc, 10)
     end
 
     it "should subtract two numbers" do
