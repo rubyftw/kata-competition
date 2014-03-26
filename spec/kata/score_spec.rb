@@ -26,7 +26,7 @@ MiniTest::Unit.after_tests do
   puts "= POINTS ==========================="
   puts "Snail sort:              #{ points(:snail_sort).to_s.rjust(10) }"
   puts "Palindrome validator:    #{ points(:palindrome).to_s.rjust(10) }"
-  puts "Method chain calculator: #{ points(:calculator).to_s.rjust(10) }"
+  puts "Method chain calculator: #{ points(:calc).to_s.rjust(10) }"
   puts "------------------------------------"
   puts "Total Points:            #{ $redis.get("kata_competition:#{ RUN_ID }:points").to_s.rjust(10) }"
 end
