@@ -3,12 +3,7 @@ module Kata
   module_function
 
   def snail_sort(array)
-    sorted = []
-    while roll = Snail.new(array).unroll
-      break if roll == []
-      sorted = sorted + roll
-    end
-    sorted
+    Snail.new(array).sort
   end
 
   def palindrome?(string)
