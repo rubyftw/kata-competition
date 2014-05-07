@@ -20,10 +20,10 @@ describe Kata do
 
     it "should allow arrays of different sub-lengths, using the longest as the length" do
       array = [[ 1, 2, 3, 4, 5 ],
-               [ 7, 8, 9, 10, nil ],
-               [ 11, 12, 13, nil, nil ]]
+               [ 7, 8, 9, 10 ],
+               [ 11, 12, 13 ]]
 
-      Kata.snail_sort(array).must_equal([1, 2, 3, 4, 5, 6, nil, nil, nil, 13, 12, 11, 7, 8, 9, 10 ])
+      Kata.snail_sort(array).must_equal([1, 2, 3, 4, 5, nil, nil, nil, 13, 12, 11, 7, 8, 9, 10 ])
     end
   end
 end
